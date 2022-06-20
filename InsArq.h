@@ -201,3 +201,14 @@ int contarVezes(int valor, Arvore *raiz) {
         return 0;
     }
 }
+
+int mesmoNivel(Arvore *raiz) {
+  int valorn , valorm;
+  int tmp1, tmp2;
+  valorn = menorElemento(raiz)->valor;
+  valorm = maiorElemento(raiz)->valor;
+    tmp1 = localizarNivel(valorn, raiz);
+    tmp2 = localizarNivel(valorm, raiz);
+  if (tmp1 == tmp2) {return 1;
+    }else return 0;
+}
